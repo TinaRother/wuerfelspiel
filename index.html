@@ -1,0 +1,60 @@
+!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Würfelspiel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            width: 100px;
+            height: 100px;
+            font-size: 24px;
+            margin: 20px;
+            cursor: pointer;
+        }
+        #endButton {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Wie oft fällt die 1?</h1>
+    <div>
+        <button class="button" id="button1">1</button>
+        <button class="button" id="buttonNot1">nicht 1</button>
+    </div>
+    <button id="endButton">Ergebnisse anzeigen</button>
+
+    <div id="result" style="margin-top: 20px;"></div>
+
+    <script>
+        let count1 = 0; // Anzahl der Klicks auf "1"
+        let countNot1 = 0; // Anzahl der Klicks auf "nicht 1"
+        let totalClicks = 0; // Gesamtanzahl der Klicks
+
+        document.getElementById('button1').addEventListener('click', function() {
+            count1++;
+            totalClicks++;
+        });
+
+        document.getElementById('buttonNot1').addEventListener('click', function() {
+            countNot1++;
+            totalClicks++;
+        });
+
+        document.getElementById('endButton').addEventListener('click', function() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `Anzahl "1": ${count1}<br>Gesamtanzahl der Würfe: ${totalClicks}`;
+        });
+    </script>
+
+</body>
+</html>
