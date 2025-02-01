@@ -25,11 +25,16 @@
     </style>
 </head>
 <body>
+    <h1>1 Würfeln Sie so viele Würfe wie möglich.</h1>
+    <h1>Je mehr Sie schaffen, desto besser das Ergebnis!</h1>
 
-    <h1>Wie oft fällt die 1?</h1>
     <div>
         <button class="button" id="button1">1</button>
-        <button class="button" id="buttonNot1">nicht 1</button>
+        <button class="button" id="button2">2</button>
+        <button class="button" id="button3">3</button>
+        <button class="button" id="button4">4</button>
+        <button class="button" id="button5">5</button>
+        <button class="button" id="button6">6</button>
     </div>
     <button id="endButton">Ergebnisse anzeigen</button>
 
@@ -37,7 +42,11 @@
 
     <script>
         let count1 = 0; // Anzahl der Klicks auf "1"
-        let countNot1 = 0; // Anzahl der Klicks auf "nicht 1"
+        let count2 = 0; // Anzahl der Klicks auf "2"
+        let count3 = 0; // Anzahl der Klicks auf "3"
+        let count4 = 0; // Anzahl der Klicks auf "4"
+        let count5 = 0; // Anzahl der Klicks auf "5"
+        let count6 = 0; // Anzahl der Klicks auf "6"
         let totalClicks = 0; // Gesamtanzahl der Klicks
 
         document.getElementById('button1').addEventListener('click', function() {
@@ -45,14 +54,38 @@
             totalClicks++;
         });
 
-        document.getElementById('buttonNot1').addEventListener('click', function() {
-            countNot1++;
+        document.getElementById('button2').addEventListener('click', function() {
+            count2++;
+            totalClicks++;
+        });
+        document.getElementById('button3').addEventListener('click', function() {
+            count3++;
+            totalClicks++;
+        });
+        document.getElementById('button4').addEventListener('click', function() {
+            count4++;
+            totalClicks++;
+        });
+        document.getElementById('button5').addEventListener('click', function() {
+            count5++;
+            totalClicks++;
+        });
+        
+        
+        document.getElementById('button6').addEventListener('click', function() {
+            count6++;
             totalClicks++;
         });
 
         document.getElementById('endButton').addEventListener('click', function() {
             const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = `Anzahl "1": ${count1}<br>Gesamtanzahl der Würfe: ${totalClicks}`;
+            resultDiv.innerHTML = `Anzahl gewürfelter 1en: ${count1} <br>
+            `Anzahl gewürfelter 2en: ${count2} <br>
+            `Anzahl gewürfelter 3en: ${count3} <br>
+            `Anzahl gewürfelter 4en: ${count4} <br>
+            `Anzahl gewürfelter 5en: ${count5} <br>
+            `Anzahl gewürfelter 6en: ${count6} <br><br>
+            Gesamtanzahl der Würfe: ${totalClicks}`;
         });
     </script>
 
