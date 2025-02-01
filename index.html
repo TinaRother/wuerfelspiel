@@ -26,7 +26,7 @@
 </head>
 <body>
     <h1>Würfeln Sie so oft wie möglich.</h1>
-    <h1>Je mehr Sie schaffen, desto besser das Ergebnis!</h1>
+    <h1>Je öfter Sie würfeln, desto besser das Ergebnis!</h1>
 
     <div>
         <button class="button" id="button1">1</button>
@@ -79,12 +79,12 @@
 
         document.getElementById('endButton').addEventListener('click', function() {
             const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = `Anzahl gewürfelter 1en: ${count1} <br>
-                                   Anzahl gewürfelter 2en: ${count2} <br>
-                                   Anzahl gewürfelter 3en: ${count3} <br>
-                                   Anzahl gewürfelter 4en: ${count4} <br>
-                                   Anzahl gewürfelter 5en: ${count5} <br>
-                                   Anzahl gewürfelter 6en: ${count6} <br><br>
+            resultDiv.innerHTML = `Anzahl 1en: ${count1} <br>
+                                   Anzahl 2en: ${count2} <br>
+                                   Anzahl 3en: ${count3} <br>
+                                   Anzahl 4en: ${count4} <br>
+                                   Anzahl 5en: ${count5} <br>
+                                   Anzahl 6en: ${count6} <br><br>
                                    Gesamtanzahl der Würfe: ${totalClicks}`;
         });
     </script>
